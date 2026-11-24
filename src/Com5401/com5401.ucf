@@ -1,0 +1,91 @@
+# strap-in configuration. Micrel KSZ9021RN
+# advertise all capabilities: 10/100/1000
+NET "RXD<3>" PULLUP ;
+NET "RXD<2>" PULLUP ;
+NET "RXD<1>" PULLUP ;
+NET "RXD<0>" PULLUP ;
+# enable 125 MHz clock reference to FPGA (at least for one PHY, not needed for all PHYs)
+NET "RX_CTL" PULLUP;
+# dual LED mode
+NET "CLK125_NDO" PULLDOWN;
+# PHYAD2   This PHY address is 4
+NET "RXC" PULLUP;
+# repeat the code above for each PHY
+
+
+# COM-1600 interface with COM-5401
+# PHY#1
+NET "RXC" LOC = "C9";
+NET "RX_CTL" LOC = "D9";
+NET "RXD<0>" LOC = "F9";
+NET "RXD<1>" LOC = "G9";
+NET "RXD<2>" LOC = "A11";
+NET "RXD<3>" LOC = "B11";
+NET "TXC" LOC = "F10";
+NET "TX_CTL" LOC = "G11";
+NET "TXD<0>" LOC = "A12";
+NET "TXD<1>" LOC = "B12";
+NET "TXD<2>" LOC = "E11";
+NET "TXD<3>" LOC = "F11";
+NET "CLK125_NDO" LOC = "C12";
+NET "INT_N" LOC = "D12";
+NET "RESET_N" LOC = "A13";
+NET "MCLK" LOC = "C13";
+NET "MDIO" LOC = "E12";
+
+# PHY#2
+#NET "RXC" LOC = "C11";
+#NET "RX_CTL" LOC = "D11";
+#NET "RXD<0>" LOC = "A5";
+#NET "RXD<1>" LOC = "C5";
+#NET "RXD<2>" LOC = "E6";
+#NET "RXD<3>" LOC = "F7";
+#NET "TXC" LOC = "A6";
+#NET "TX_CTL" LOC = "B6";
+#NET "TXD<0>" LOC = "E8";
+#NET "TXD<1>" LOC = "E7";
+#NET "TXD<2>" LOC = "A7";
+#NET "TXD<3>" LOC = "C7";
+#NET "CLK125_NDO" LOC = "C8";
+#NET "INT_N" LOC = "D8";
+#NET "RESET_N" LOC = "F8";
+#NET "MDC" LOC = "G8";
+#NET "MDIO" LOC = "A8";
+
+# PHY#3
+#NET "RXC" LOC = "A9";
+#NET "RX_CTL" LOC = "B9";
+#NET "RXD<0>" LOC = "A14";
+#NET "RXD<1>" LOC = "B14";
+#NET "RXD<2>" LOC = "E13";
+#NET "RXD<3>" LOC = "F13";
+#NET "TXC" LOC = "A15";
+#NET "TX_CTL" LOC = "C15";
+#NET "TXD<0>" LOC = "C14";
+#NET "TXD<1>" LOC = "D14";
+#NET "TXD<2>" LOC = "A16";
+#NET "TXD<3>" LOC = "B16";
+#NET "CLK125_NDO" LOC = "A4";
+#NET "INT_N" LOC = "B4";
+#NET "RESET_N" LOC = "C6";
+#NET "MDC" LOC = "D6";
+#NET "MDIO" LOC = "A3";
+
+# PHY#4
+#NET "RXC" LOC = "L13";
+#NET "RX_CTL" LOC = "L12";
+#NET "RXD<0>" LOC = "F16";
+#NET "RXD<1>" LOC = "F15";
+#NET "RXD<2>" LOC = "C18";
+#NET "RXD<3>" LOC = "C17";
+#NET "TXC" LOC = "G14";
+#NET "TX_CTL" LOC = "F14";
+#NET "TXD<0>" LOC = "D18";
+#NET "TXD<1>" LOC = "D17";
+#NET "TXD<2>" LOC = "G13";
+#NET "TXD<3>" LOC = "H12";
+#NET "CLK125_NDO" LOC = "E18";
+#NET "INT_N" LOC = "E16";
+#NET "RESET_N" LOC = "K13";
+#NET "MDC" LOC = "K12";
+#NET "MDIO" LOC = "F18";
